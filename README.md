@@ -57,7 +57,7 @@ Se busca realizar un proyecto de tecnologías sin servidor (serverless) para con
 ### Capturas de pantalla
 
 > **Figura 1**: Respuesta exitosa al crear un carro.
-> ![POST /carro](https://imgur.com/CmRhblg.png) > ![POST /carro](https://i.imgur.com/uvIhSqQ.png)
+> ![POST /carro](https://imgur.com/CmRhblg.png) > ![POST /carro](https://i.imgur.com/dBpLcsG.png)
 
 > **Figura 2**: Consulta de todos los carros registrados.  
 > ![GET /carro](https://i.imgur.com/3RMUNF0.png)
@@ -69,7 +69,7 @@ Se busca realizar un proyecto de tecnologías sin servidor (serverless) para con
 > ![DELETE /carro/{id}](https://i.imgur.com/QXGVRsr.png) > ![DELETE /carro/{id}](https://i.imgur.com/vMEQr1X.png)
 
 > **Figura 5**: Editar un carro.  
-> ![DELETE /carro/{id}](https://i.imgur.com/kPOyVEP.png)
+> ![DELETE /carro/{id}](https://i.imgur.com/kPOyVEP.png) > ![DELETE /carro/{id}](https://i.imgur.com/cl83C1C.png)
 
 ---
 
