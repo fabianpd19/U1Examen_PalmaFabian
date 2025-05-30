@@ -51,11 +51,11 @@ Se busca realizar un proyecto de tecnologías sin servidor (serverless) para con
 
 ### Descripción de las operaciones CRUD
 
-- **GET /items**: Retorna todos los registros en la tabla.
-- **GET /items/{id}**: Retorna el ítem correspondiente al ID.
-- **POST /items**: Crea un nuevo ítem con los datos recibidos en el body.
-- **PUT /items/{id}**: Actualiza el ítem con el ID especificado.
-- **DELETE /items/{id}**: Elimina el ítem de la base de datos.
+- **GET /carro**: Retorna todos los registros en la tabla.
+- **GET /carro/{id}**: Retorna el ítem correspondiente al ID.
+- **POST /carro**: Crea un nuevo ítem con los datos recibidos en el body.
+- **PUT /carro/{id}**: Actualiza el ítem con el ID especificado.
+- **DELETE /carro/{id}**: Elimina el ítem de la base de datos.
 
 ### Capturas de pantalla
 
