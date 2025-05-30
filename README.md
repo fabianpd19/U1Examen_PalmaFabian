@@ -38,6 +38,9 @@ Se busca realizar un proyecto de tecnologías sin servidor (serverless) para con
 
     |-- src
         |-- agregarCarro.js
+        |-- editarCarro.js
+        |-- eliminarCarro.js
+        |-- mostrarCarro.js
         |-- mostrarCarros.js
     |-- .gitignore
     |-- handler.js
