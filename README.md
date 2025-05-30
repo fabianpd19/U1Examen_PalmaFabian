@@ -57,15 +57,18 @@ Se busca realizar un proyecto de tecnologías sin servidor (serverless) para con
 ### Capturas de pantalla
 
 > **Figura 1**: Respuesta exitosa al crear un carro.
-> ![POST /carro](https://imgur.com/CmRhblg.png)
+> ![POST /carro](https://imgur.com/CmRhblg.png) > ![POST /carro](https://i.imgur.com/uvIhSqQ.png)
 
 > **Figura 2**: Consulta de todos los carros registrados.  
 > ![GET /carro](https://i.imgur.com/3RMUNF0.png)
 
-> **Figura 3**: Eliminación de un carro.  
-> ![DELETE /carro/{id}](https://i.imgur.com/QXGVRsr.png)
+> **Figura 3**: Consulta un carro registrado.  
+> ![GET /carro](//https://i.imgur.com/AW96umo.png)
 
-> **Figura 4**: Editar un carro.  
+> **Figura 4**: Eliminación de un carro.  
+> ![DELETE /carro/{id}](https://i.imgur.com/QXGVRsr.png) > ![DELETE /carro/{id}](https://i.imgur.com/vMEQr1X.png)
+
+> **Figura 5**: Editar un carro.  
 > ![DELETE /carro/{id}](https://i.imgur.com/kPOyVEP.png)
 
 ---
@@ -86,7 +89,7 @@ Se busca realizar un proyecto de tecnologías sin servidor (serverless) para con
 1. Clonar el repositorio:
 
    ```bash
-   git clone https://github.com/usuario/serverless-api.git
+   git clone https://github.com/fabianpd19/U1Examen_PalmaFabian.git
    cd serverless-api
    ```
 
