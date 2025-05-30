@@ -1,0 +1,154 @@
+<!-- frontend/index.html -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Gestión de Carros</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #ecf0f1;
+            --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            --border-radius: 10px;
+            --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-family);
+            margin: 0;
+            padding: 40px;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            background-color: white;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: var(--border-radius);
+            width: 180px;
+        }
+
+        button {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: var(--box-shadow);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+
+        th,
+        td {
+            padding: 12px 15px;
+            text-align: center;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .btn-accion {
+            padding: 6px 12px;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-accion:hover {
+            background-color: #c0392b;
+        }
+
+        @media (max-width: 768px) {
+            input {
+                width: 100%;
+            }
+
+            form {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            table {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>🚗 Gestión de Carros</h1>
+
+    <form id="formulario-carro">
+        <input type="text" id="marca" placeholder="Marca" required />
+        <input type="text" id="modelo" placeholder="Modelo" required />
+        <input type="number" id="anio" placeholder="Año" required />
+        <input type="text" id="color" placeholder="Color" required />
+        <input type="number" id="precio" placeholder="Precio" required />
+        <button type="submit">Agregar Carro</button>
+    </form>
+
+    <h2>📋 Lista de Carros</h2>
+    <table id="tabla-carros">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Año</th>
+                <th>Color</th>
+                <th>Precio</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+# "org" ensures this Service is used with the correct Serverless Framework Access Key.
+org: ufaespe
+# "app" enables Serverless Framework Dashboard features and sharing them with other Services.
+app: testexamenu1
+# "service" is the name of this project. This will also be added to your AWS resource names.
+service: testU1Examen
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  httpApi:
+    cors:
+      allowedOrigins:
+        - '*'
+      allowedMethods:
+        - GET
+        - POST
+        - PUT
+        - DELETE
+        - OPTIONS
+      allowedHeaders:
+        - Content-Type
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:*
+      Resource: arn:aws:dynamodb:us-east-1:599841538632:table/carrosTable
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - httpApi:
+          path: /
+          method: get
+
+  agregarCarro:
+    handler: src/agregarCarro.agregarCarro
+    events:
+      - httpApi:
+          path: /carro
+          method: post
+
+  mostrarCarros:
+    handler: src/mostrarCarros.mostrarCarros
+    events:
+      - httpApi:
+          path: /carro
+          method: get
+
+  mostrarCarro:
+    handler: src/mostrarCarro.mostrarCarro
+    events:
+      - httpApi:
+          path: /carro/{id}
+          method: get
+
+  eliminarCarro:
+    handler: src/eliminarCarro.eliminarCarro
+    events:
+      - httpApi:
+          path: /carro/{id}
+          method: delete
+
+  editarCarro:
+    handler: src/editarCarro.editarCarro
+    events:
+      - httpApi:
+          path: /carro/{id}
+          method: put
+
+resources: # CloudFormation template syntax from here on.
+  Resources:
+    carrosTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: carrosTable
+        BillingMode: PAY_PER_REQUEST
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
